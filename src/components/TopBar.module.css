@@ -1,0 +1,56 @@
+.topbar {
+  background: var(--color-dark);
+  color: var(--color-dark-text);
+  font-size: 13px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  gap: 16px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-dark-text);
+  transition: color 0.16s ease;
+  min-width: 0;
+}
+
+.right .item:hover {
+  color: #fff;
+}
+
+.address {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 46vw;
+}
+
+@media (max-width: 860px) {
+  .hideSm {
+    display: none;
+  }
+  .right {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    display: none;
+  }
+}
